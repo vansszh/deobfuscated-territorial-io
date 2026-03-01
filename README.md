@@ -1,4 +1,4 @@
-================================================================================
+
 TERRITORIAL.IO - DEOBFUSCATED CODE DOCUMENTATION
 
 File: index.html (Deobfuscated)
@@ -8,9 +8,8 @@ Game Type: Browser-based multiplayer territory conquest game
 Technologies: HTML5, JavaScript, Canvas API, WebSocket, Base64 encoding
 Deobfuscation: ~96 batches of transformations applied
 
-================================================================================
 TABLE OF CONTENTS
-================================================================================
+
 1. CORE GAME SYSTEMS
 2. USER INTERFACE COMPONENTS  
 3. PLAYER & DATA MANAGEMENT
@@ -27,10 +26,7 @@ TABLE OF CONTENTS
 14. COLOR SYSTEM
 15. STORAGE & PERSISTENCE
 
-================================================================================
 DEOBFUSCATION SUMMARY
-================================================================================
-
 Key Renamed Classes/Constructors:
 - GameState() - Main game state container
 - GameLoop() - Game tick and frame management
@@ -61,10 +57,7 @@ Key Renamed Global Objects:
 - attackManager - Attack handling
 - statsTracker - Statistics tracking
 
-================================================================================
 1. CORE GAME SYSTEMS
-================================================================================
-
 GameState()
     - Main game state container
     - Properties:
@@ -102,9 +95,7 @@ GameConfig()
       * deltaTime - Time since last frame
       * fps - Current framerate
 
-================================================================================
 2. USER INTERFACE COMPONENTS
-================================================================================
 
 Button()
     - Clickable button component
@@ -134,9 +125,7 @@ NotificationSystem
       * showInfoMessage() - Info toast
       * hideNotification() - Remove toast
 
-================================================================================
 3. PLAYER & DATA MANAGEMENT
-================================================================================
 
 PlayerDataClass()
     - playerData object - Player state storage
@@ -173,9 +162,7 @@ ActivePlayers()
     - Methods:
       * update() - Refresh active list
 
-================================================================================
 4. MAP & WORLD SYSTEMS
-================================================================================
 
 MapManager()
     - mapManager object - Map rendering system
@@ -218,9 +205,7 @@ Position Utilities (positionUtils):
       * screenToWorldY(screenY) - Convert screen to world
       * isValidPosition(x, y) - Bounds check
 
-================================================================================
 5. COMBAT & ATTACK SYSTEMS
-================================================================================
 
 Attack Functions:
     cancelAttack()
@@ -316,9 +301,7 @@ Team Utilities (teamUtils object):
       * applyChanges() - Apply all changes
       * recalculateTerritory() - Full recalc
 
-================================================================================
 6. AI & BOT SYSTEMS
-================================================================================
 
 BotAIController()
     - botAI object - Main bot AI system
@@ -387,9 +370,7 @@ Random Generator (randomGenerator object):
       * getRandom() - Random 0-1
       * getValue(max) - Random value
 
-================================================================================
 7. NETWORKING & MULTIPLAYER
-================================================================================
 
 NetworkController()
     - networkManager object
@@ -416,9 +397,7 @@ Leaderboard System (leaderboard object):
     - teamStats sub-object:
       * setBalance(player, amount) - Set balance
 
-================================================================================
 8. REPLAY SYSTEM
-================================================================================
 
 ReplaySystem()
     - replaySystem object
@@ -459,9 +438,7 @@ Replay Functions:
     calculateReplayHash()
         - Generate replay checksum
 
-================================================================================
 9. SETTINGS & CONFIGURATION
-================================================================================
 
 SettingsManager()
     - settingsManager object
@@ -494,9 +471,7 @@ LocalStorage()
       * platform.memoryStorage - In-memory fallback
       * platform.storageWorker - Background worker
 
-================================================================================
 10. UTILITY & HELPER FUNCTIONS
-================================================================================
 
 Math Utilities (mathUtils object):
     - intDiv(a, b) - Integer division
@@ -514,9 +489,7 @@ Color Utilities (utils.color):
     - rgb(r, g, b) - Create RGB color string
     - rgba(r, g, b, a) - Create RGBA color string
 
-================================================================================
 11. RENDERING & GRAPHICS
-================================================================================
 
 Sprite Renderer (spriteRenderer object):
     - Methods:
@@ -532,9 +505,7 @@ Canvas Context (canvasContext):
     - 2D rendering context
     - Standard Canvas API methods
 
-================================================================================
 12. INPUT HANDLING
-================================================================================
 
 Input Functions:
     handleKeyDown(event)
@@ -569,9 +540,7 @@ Action Handler (actionHandler object):
     - Methods:
       * applyZoom(ratio, offsetX, offsetY) - Apply zoom change
 
-================================================================================
 13. CAMERA & VIEWPORT
-================================================================================
 
 Camera Position (cameraPosition object):
     - Properties:
@@ -634,9 +603,7 @@ Internal Camera Functions:
     updateCameraAnimation()
         - Animate camera transition
 
-================================================================================
 14. COLOR SYSTEM
-================================================================================
 
 ColorConstants()
     - Predefined color palette
@@ -708,9 +675,7 @@ Blue Variants:
     - lightBlue - RGB(200, 235, 245)
     - infoColor - RGB(160, 160, 255)
 
-================================================================================
 15. STORAGE & PERSISTENCE
-================================================================================
 
 Platform Detection (platform object):
     - id: Platform type (0=browser, 1=native, 2=worker)
@@ -729,9 +694,7 @@ Settings Data Indices (partial):
     - [140]: Storage enabled flag
     - [161]: Recent players list (semicolon-separated)
 
-================================================================================
 GAME MODES
-================================================================================
 
 0 - Free For All
 1 - Teams (Small)
@@ -744,9 +707,7 @@ GAME MODES
 8 - Tournament
 9 - Special Event
 
-================================================================================
 KEY MAPPINGS (Default)
-================================================================================
 
 Space - Center on player
 Tab - Show leaderboard
@@ -758,9 +719,7 @@ WASD/Arrows - Pan camera
 M - Toggle minimap
 P - Pause (local games)
 
-================================================================================
 WEBSOCKET PROTOCOL
-================================================================================
 
 Connection:
     - Connects to game server
@@ -775,6 +734,4 @@ Message Types:
     - Team updates
     - Replay data
 
-================================================================================
 END OF DOCUMENTATION
-================================================================================
